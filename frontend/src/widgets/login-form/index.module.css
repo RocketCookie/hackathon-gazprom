@@ -42,9 +42,11 @@
   transition: border-color .25s ease;
 }
 
-.form_forgot_text, .form_error {
+.form_forgot_text, .form_error, .form_register {
   font: 400 14px / 1.57143 var(--font-family-one);
   margin: 0;
+  text-align: center;
+  cursor: pointer;
   transition: opacity .5s ease, color .25s ease;
 }
 
@@ -65,13 +67,6 @@
 
 .form_forgot_text {
   color: rgba(0, 0, 0, 0.45);
-  cursor: pointer;
-  text-align: center;
-}
-
-.form_forgot_text:hover {
-  color: var(--color-hover);
-  opacity: .45;
 }
 
 .form_submit {
@@ -90,8 +85,11 @@
 
 .form_register {
   color: var(--color-hover);
-  font: 400 14px / 1.57143 var(--font-family-one);
-  text-align: center;
   text-decoration: underline;
   text-decoration-skip-ink: none;
+}
+
+.form_forgot_text:hover, .form_register:hover {
+  color: var(--color-hover);
+  opacity: .45;
 }
