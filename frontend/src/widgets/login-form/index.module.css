@@ -1,0 +1,97 @@
+.form {
+  color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  font: 500 16px / 1.5 var(--font-family-one);
+  max-width: 368px;
+  row-gap: 12px;
+  width: 100%;
+}
+
+.form_title {
+  margin: 0;
+  text-align: center;
+}
+
+.form_fieldset, .form_fieldset_gap_xl {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.form_fieldset {
+  row-gap: 22px;
+}
+
+.form_fieldset_gap_xl {
+  row-gap: 32px;
+}
+
+.form_label {
+  position: relative;
+}
+
+.form_input {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+  height: 40px;
+  transition: border-color .25s ease;
+}
+
+.form_forgot_text, .form_error {
+  font: 400 14px / 1.57143 var(--font-family-one);
+  margin: 0;
+  transition: opacity .5s ease, color .25s ease;
+}
+
+.form_error {
+  box-sizing: border-box;
+  color: var(--color-error);
+  left: 0;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0 11px;
+  position: absolute;
+  text-overflow: ellipsis;
+  top: 40px;
+  text-align: center;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.form_forgot_text {
+  color: rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  text-align: center;
+}
+
+.form_forgot_text:hover {
+  color: var(--color-hover);
+  opacity: .45;
+}
+
+.form_submit {
+  background: var(--color-hover);
+  border: 1px solid #1890ff;
+  border-radius: 2px;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+  color: var(--color-white);
+  font: 400 16px / 1.5 var(--font-family-one);
+  min-height: 40px;
+  padding: 6px 15px;
+  text-align: center;
+  transition: background-color .5s ease;
+  width: 100%;
+}
+
+.form_register {
+  color: var(--color-hover);
+  font: 400 14px / 1.57143 var(--font-family-one);
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}

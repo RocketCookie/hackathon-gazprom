@@ -1,0 +1,22 @@
+:root {
+  /* colors */
+  --color-black: #2e2e2e;
+  --color-gray: #e4e3e8;
+  --color-gray-dark: #c1c0be;
+  --color-gray-light: #f8f8fa;
+  --color-white: #fff;
+  --color-bg-main: #f0f2f5;
+  --color-hover: #1890ff;
+  --color-border: #d9d9d9;
+  --color-error: #ff4d4f;
+
+  /* --color-hover: #e6f7ff; */
+
+  /* fonts */
+  --font-family-five: "SF Pro Display", sans-serif;
+  --font-family-four: "Roboto Mono", sans-serif;
+  --font-family-one: "Roboto", sans-serif;
+  --font-family-six: "Marker Felt", sans-serif;
+  --font-family-three: "Rubik", sans-serif;
+  --font-family-two: "PingFang SC", sans-serif;
+}

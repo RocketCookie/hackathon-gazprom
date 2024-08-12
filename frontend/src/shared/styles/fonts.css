@@ -1,0 +1,59 @@
+/* rubik-medium */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: local('Rubik'), url('../fonts/Rubik/Rubik-Medium.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/Rubik/Rubik-Medium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-medium-500 */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: local('Roboto'), url('../fonts/Roboto/Roboto-Medium.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/Roboto/Roboto-Medium.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-regular-400 */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: local('Roboto'), url('../fonts/Roboto/Roboto-Regular.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/Roboto/Roboto-Regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-bold-700 */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: local('Roboto'), url('../fonts/Roboto/Roboto-Bold.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/Roboto/Roboto-Bold.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-italic-400 */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 400;
+  src: local('Roboto'), url('../fonts/Roboto/Roboto-Italic.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/Roboto/Roboto-Italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-light-italic-300 */
+@font-face {
+  font-family: 'Roboto';
+  font-style: italic;
+  font-display: swap;
+  font-weight: 300;
+  src: local('Roboto'), url('../fonts/Roboto/Roboto-LightItalic.woff2') format('woff2'),
+    /* Chrome 26+, Opera 23+, Firefox 39+ */ url('../fonts/Roboto/Roboto-LightItalic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
