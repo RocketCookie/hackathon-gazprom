@@ -13,6 +13,10 @@ export const router = createBrowserRouter(
       element: <Login />,
     },
     {
+      path: paths.REGISTER,
+      element: <h1>registration</h1>,
+    },
+    {
       path: '*',
       element: <Navigate to={ paths.LOGIN } />,
     },

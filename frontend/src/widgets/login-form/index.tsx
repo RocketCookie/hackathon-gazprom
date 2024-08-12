@@ -1,8 +1,10 @@
 import { Button, Input } from 'antd';
 import { clsx } from 'clsx';
 import { FC } from 'react';
+import { paths } from '../../shared/constants/paths.ts';
 import styles from './index.module.css';
 import { LoginFormProps } from './types.ts';
+import { NavLink } from 'react-router-dom';
 
 export const LoginForm: FC<LoginFormProps> = ({
   formik,
@@ -71,12 +73,13 @@ export const LoginForm: FC<LoginFormProps> = ({
           Войти
         </Button>
 
-        <
+        <NavLink
+          to={ paths.REGISTER }
           className={ clsx(styles.form_register) }
           onClick={ handleForgotPasswordClick }
         >
           Зарегистрироваться
-        </>
+        </NavLink>
       </fieldset>
     </form>
   );
