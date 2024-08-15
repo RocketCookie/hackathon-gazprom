@@ -1,5 +1,6 @@
 import { createBrowserRouter, Navigate } from 'react-router-dom';
-import { Login } from '../pages/login';
+import { LoginPage } from '../pages/login';
+import { RegistrationPage } from '../pages/registration';
 import { paths } from '../shared/constants/paths.ts';
 
 export const router = createBrowserRouter(
@@ -10,11 +11,11 @@ export const router = createBrowserRouter(
     },
     {
       path: paths.LOGIN,
-      element: <Login />,
+      element: <LoginPage />,
     },
     {
       path: paths.REGISTER,
-      element: <h1>registration</h1>,
+      element: <RegistrationPage />,
     },
     {
       path: '*',

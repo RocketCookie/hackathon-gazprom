@@ -1,0 +1,66 @@
+.form {
+  color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  font: 500 16px / 1.5 var(--font-family-one);
+  max-width: 368px;
+  row-gap: 24px;
+  width: 100%;
+}
+
+.form_fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.form_fieldset_gap_l {
+  row-gap: 22px;
+}
+
+.form_buttons_wrapper {
+  column-gap: 12px;
+  display: flex;
+}
+
+.form_button {
+  font: 400 14px / 1.5 var(--font-family-one);
+  min-height: 32px;
+  padding: 4px 15px;
+  text-align: center;
+  transition: background-color .5s ease;
+  width: 100%;
+  max-width: var(--width);
+  border-radius: 2px;
+}
+
+.form_submit {
+  --width: 244px;
+  background: var(--color-hover);
+  border: 1px solid var(--color-hover);
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.04);
+  color: var(--color-white);
+  flex: 1 1 var(--width);
+}
+
+.form_reset {
+  --width: 112px;
+  background: var(--color-white);
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.02);
+  color: rgba(0, 0, 0, 0.85);
+  flex: 0 0 var(--width);
+}
+
+.form_register {
+  color: var(--color-hover);
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.form_forgot_text:hover, .form_register:hover {
+  color: var(--color-hover);
+  opacity: .45;
+}

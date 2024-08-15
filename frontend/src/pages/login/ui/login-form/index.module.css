@@ -9,6 +9,7 @@
 }
 
 .form_title {
+  font: 500 14px / 1.5 var(--font-family-one);
   margin: 0;
   text-align: center;
 }
@@ -30,39 +31,12 @@
   row-gap: 32px;
 }
 
-.form_label {
-  position: relative;
-}
-
-.form_input {
-  background-color: var(--color-white);
-  border: 1px solid var(--color-border);
-  border-radius: 2px;
-  height: 40px;
-  transition: border-color .25s ease;
-}
-
-.form_forgot_text, .form_error, .form_register {
+.form_forgot_text, .form_register {
   font: 400 14px / 1.57143 var(--font-family-one);
   margin: 0;
   text-align: center;
   cursor: pointer;
   transition: opacity .5s ease, color .25s ease;
-}
-
-.form_error {
-  box-sizing: border-box;
-  color: var(--color-error);
-  left: 0;
-  max-width: 100%;
-  overflow: hidden;
-  padding: 0 11px;
-  position: absolute;
-  text-overflow: ellipsis;
-  top: 40px;
-  text-align: center;
-  white-space: nowrap;
-  width: 100%;
 }
 
 .form_forgot_text {

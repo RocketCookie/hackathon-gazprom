@@ -4,6 +4,7 @@
   flex-direction: column;
   row-gap: 10px;
   padding: 28px 0;
+  align-items: center;
 }
 
 .footer_text {
