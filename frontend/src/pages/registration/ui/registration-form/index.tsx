@@ -1,8 +1,8 @@
-import { Button } from 'antd';
 import { clsx } from 'clsx';
 import { ReactElement } from 'react';
-import { InputField } from '../../../../shared/ui/input-field';
-import { SelectField } from '../../../../shared/ui/select-field';
+import { ButtonElement } from '../../../../shared/ui/button';
+import { InputElement } from '../../../../shared/ui/input';
+import { SelectElement } from '../../../../shared/ui/select';
 import styles from './index.module.css';
 import { RegistrationFormProps } from './types.ts';
 
@@ -17,7 +17,7 @@ export const RegistrationForm = ({
     >
       <fieldset className={ clsx(styles.form_fieldset, styles.form_fieldset_gap_l) }>
 
-        <InputField
+        <InputElement
           onChange={ formik.handleChange }
           onBlur={ formik.handleBlur }
           inputValue={ formik.values.lastName }
@@ -31,7 +31,7 @@ export const RegistrationForm = ({
           touched={ formik.touched.lastName }
         />
 
-        <InputField
+        <InputElement
           onChange={ formik.handleChange }
           onBlur={ formik.handleBlur }
           inputValue={ formik.values.firstName }
@@ -45,7 +45,7 @@ export const RegistrationForm = ({
           touched={ formik.touched.firstName }
         />
 
-        <InputField
+        <InputElement
           onChange={ formik.handleChange }
           onBlur={ formik.handleBlur }
           inputValue={ formik.values.secondName }
@@ -58,7 +58,7 @@ export const RegistrationForm = ({
           touched={ formik.touched.secondName }
         />
 
-        <SelectField
+        <SelectElement
           name={ 'unit' }
           onBlur={ formik.handleBlur }
           error={ formik.errors.unit }
@@ -73,7 +73,7 @@ export const RegistrationForm = ({
           ] }
         />
 
-        <SelectField
+        <SelectElement
           name={ 'position' }
           onBlur={ formik.handleBlur }
           setFieldValue={ formik.setFieldValue }
@@ -88,7 +88,7 @@ export const RegistrationForm = ({
           ] }
         />
 
-        <InputField
+        <InputElement
           onChange={ formik.handleChange }
           onBlur={ formik.handleBlur }
           inputValue={ formik.values.email }
@@ -102,7 +102,7 @@ export const RegistrationForm = ({
           aria-required={ 'true' }
         />
 
-        <InputField
+        <InputElement
           onChange={ formik.handleChange }
           onBlur={ formik.handleBlur }
           inputValue={ formik.values.password }
@@ -116,7 +116,7 @@ export const RegistrationForm = ({
           aria-required={ 'true' }
         />
 
-        <InputField
+        <InputElement
           onChange={ formik.handleChange }
           onBlur={ formik.handleBlur }
           inputValue={ formik.values.confirmedPassword }
@@ -130,21 +130,21 @@ export const RegistrationForm = ({
           touched={ formik.touched.confirmedPassword }
         />
         <div className={ clsx(styles.form_buttons_wrapper) }>
-          <Button
+          <ButtonElement
             className={ clsx(styles.form_button, styles.form_submit) }
             htmlType={ 'submit' }
             disabled={ !formik.isValid }
           >
             Регистрация
-          </Button>
-          <Button
+          </ButtonElement>
+          <ButtonElement
             className={ clsx(styles.form_button, styles.form_reset) }
             htmlType={ 'reset' }
             disabled={ !formik.dirty }
             onClick={ formik.handleReset }
           >
             Отмена
-          </Button>
+          </ButtonElement>
         </div>
       </fieldset>
     </form>

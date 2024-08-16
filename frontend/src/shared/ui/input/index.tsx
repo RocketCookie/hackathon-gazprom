@@ -2,9 +2,9 @@ import { Input } from 'antd';
 import { clsx } from 'clsx';
 import { ReactElement } from 'react';
 import styles from './index.module.css';
-import { InputFieldProps } from './types.ts';
+import { InputElementProps } from './types.ts';
 
-export const InputField = ({
+export const InputElement = ({
   onChange,
   onBlur,
   inputValue,
@@ -16,7 +16,7 @@ export const InputField = ({
   allowClear,
   autoComplete,
   ...props
-}: InputFieldProps): ReactElement => {
+}: InputElementProps): ReactElement => {
   return (
     <label htmlFor={ name }
            className={ clsx(styles.form_label) }>

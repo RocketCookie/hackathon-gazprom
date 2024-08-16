@@ -3,7 +3,7 @@ import { FormikErrors } from 'formik';
 import { ChangeEventHandler } from 'react';
 import { RegistrationForm } from '../../../pages/registration/types.ts';
 
-export type SelectFieldProps = {
+export type SelectElementProps = {
   name: string;
   error: string | undefined;
   touched: boolean | undefined;
