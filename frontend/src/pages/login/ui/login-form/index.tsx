@@ -1,9 +1,9 @@
-import { Button } from 'antd';
 import { clsx } from 'clsx';
 import { ReactElement } from 'react';
 import { NavLink } from 'react-router-dom';
 import { paths } from '../../../../shared/constants/paths.ts';
-import { InputField } from '../../../../shared/ui/input-field';
+import { ButtonElement } from '../../../../shared/ui/button';
+import { InputElement } from '../../../../shared/ui/input';
 import styles from './index.module.css';
 import { LoginFormProps } from './types.ts';
 
@@ -19,7 +19,7 @@ export const LoginForm = ({
       <fieldset className={ clsx(styles.form_fieldset) }>
         <h2 className={ clsx(styles.form_title) }>Введите данные для входа</h2>
 
-        <InputField
+        <InputElement
           onChange={ formik.handleChange }
           onBlur={ formik.handleBlur }
           inputValue={ formik.values.email }
@@ -35,7 +35,7 @@ export const LoginForm = ({
 
         {
           (!Boolean(formik.errors.email) && formik.touched.email) && (
-            <InputField
+            <InputElement
               onChange={ formik.handleChange }
               onBlur={ formik.handleBlur }
               inputValue={ formik.values.password }
@@ -58,13 +58,13 @@ export const LoginForm = ({
         </p>
       </fieldset>
       <fieldset className={ clsx(styles.form_fieldset_gap_xl) }>
-        <Button
+        <ButtonElement
           className={ clsx(styles.form_submit) }
           htmlType={ 'submit' }
           disabled={ !(formik.isValid && formik.touched.email) }
         >
           Войти
-        </Button>
+        </ButtonElement>
 
         <NavLink
           to={ paths.REGISTER }

@@ -1,4 +1,5 @@
 enum PATH {
+  HOME = '/',
   LOGIN = '/login',
   REGISTER = '/register',
 }

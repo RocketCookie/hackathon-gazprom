@@ -1,7 +1,7 @@
 import { InputProps } from 'antd';
 import { ChangeEventHandler } from 'react';
 
-export type InputFieldProps = {
+export type InputElementProps = {
   onChange: ChangeEventHandler<HTMLInputElement>;
   onBlur: ChangeEventHandler<HTMLInputElement>;
   inputValue: string | undefined;

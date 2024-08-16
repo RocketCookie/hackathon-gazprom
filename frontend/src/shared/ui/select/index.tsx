@@ -1,10 +1,10 @@
 import { clsx } from 'clsx';
 import { ReactElement } from 'react';
 import { Select } from 'antd';
-import { SelectFieldProps } from './types.ts';
+import { SelectElementProps } from './types.ts';
 import styles from './index.module.css';
 
-export const SelectField = ({
+export const SelectElement = ({
   name,
   placeholder,
   error,
@@ -13,7 +13,7 @@ export const SelectField = ({
   touched,
   setFieldValue,
   ...props
-}: SelectFieldProps): ReactElement => {
+}: SelectElementProps): ReactElement => {
   return (
 
     <label htmlFor={ name }
