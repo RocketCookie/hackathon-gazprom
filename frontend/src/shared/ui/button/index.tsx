@@ -14,6 +14,7 @@ export const ButtonElement = ({
   htmlType,
   children,
   className,
+  ...props
 }: ButtonElementProps): ReactElement => {
   return (
     <Button
@@ -26,6 +27,7 @@ export const ButtonElement = ({
           { [className]: className },
         )
       }
+      { ...props }
     >
       { children }
     </Button>
