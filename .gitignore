@@ -163,3 +163,9 @@ cython_debug/
 
 # VS Code
 .vscode/
+
+# Isort
+.isort.cfg
+
+# Flake8
+setup.cfg
