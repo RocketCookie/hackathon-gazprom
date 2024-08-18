@@ -6,7 +6,7 @@ import styles from '../../entities/layout/index.module.css';
 import { paths } from '../../shared/constants/paths.ts';
 import { ButtonElement } from '../../shared/ui/button';
 
-export const HomePage = (): ReactElement => {
+export const PlatformPage = (): ReactElement => {
   return (
     <Layout>
       <NavLink to={ paths.LOGIN }>

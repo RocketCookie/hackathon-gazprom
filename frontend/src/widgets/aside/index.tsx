@@ -1,22 +1,30 @@
 import { clsx } from 'clsx';
 import { ReactElement } from 'react';
 import { NavLink } from 'react-router-dom';
-import { AsideProps } from './types.ts';
+import { AsideProps } from './types';
+import style from './index.module.css';
 
 export const Aside = ({
   options,
   className,
 }: AsideProps): ReactElement => {
   return (
-    <aside className={ clsx(className ?? '') }>
+    <aside className={ clsx(style.aside, className ?? '') }>
       <nav>
-        <ul>
+        <ul className={ clsx(style.menu) }>
           { options.map(item => (
             <li
-              className={ clsx() }
+              className={ clsx(style.menu_item) }
               key={ item.key }
             >
-              <NavLink to={ item.link }>
+              <NavLink
+                className={ ({ isActive }) =>
+                  clsx(
+                    style.menu_link,
+                    { [style.menu_link_active]: isActive },
+                  ) }
+                to={ item.link }
+              >
                 { item.title }
               </NavLink>
             </li>

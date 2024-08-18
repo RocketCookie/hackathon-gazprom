@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
-import { HomePage } from '../pages/home';
+import { PlatformPage } from '../pages/platform';
 import { LoginPage } from '../pages/login';
 import { NotFoundPage } from '../pages/not-found';
 import { RegistrationPage } from '../pages/registration';
@@ -11,7 +11,7 @@ export const router = createBrowserRouter(
       index: true,
       path: paths.HOME,
       element: <>
-        <HomePage />
+        <PlatformPage />
       </>,
     },
     {
@@ -28,7 +28,7 @@ export const router = createBrowserRouter(
     },
     {
       path: paths.PLATFORM,
-      element: <h1>PLATFORM</h1>,
+      element: <PlatformPage />,
     },
     {
       path: paths.PRODUCTS,
