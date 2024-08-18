@@ -1,8 +1,12 @@
 import { createBrowserRouter } from 'react-router-dom';
+import { Layout } from '../entities/layout';
 import { PlatformPage } from '../pages/platform';
 import { LoginPage } from '../pages/login';
 import { NotFoundPage } from '../pages/not-found';
+import { ProductPage } from '../pages/product';
 import { RegistrationPage } from '../pages/registration';
+import { ServicePage } from '../pages/service';
+import { TeamPage } from '../pages/team';
 import { paths } from '../shared/constants/paths.ts';
 
 export const router = createBrowserRouter(
@@ -22,29 +26,81 @@ export const router = createBrowserRouter(
       path: paths.REGISTER,
       element: <RegistrationPage />,
     },
+
     {
-      path: paths.STRUCTURE,
-      element: <h1>STRUCTURE</h1>,
-    },
-    {
-      path: paths.PLATFORM,
-      element: <PlatformPage />,
-    },
-    {
-      path: paths.PRODUCTS,
-      element: <h1>PRODUCTS</h1>,
-    },
-    {
-      path: paths.SERVICE,
-      element: <h1>SERVICE</h1>,
-    },
-    {
-      path: paths.TEAMS,
-      element: <h1>TEAMS</h1>,
-    },
-    {
-      path: paths.EMPLOYEES,
-      element: <h1>EMPLOYEES</h1>,
+      path: paths.HOME,
+      element: <Layout />,
+      children: [
+        {
+          path: paths.STRUCTURE,
+          element: <h1>STRUCTURE</h1>,
+        },
+        {
+          path: paths.PLATFORM,
+          children: [
+            {
+              index: true,
+              element: <PlatformPage />,
+            },
+            {
+              path: `${ paths.PLATFORM }/:platformID`,
+              element: <h1>id</h1>,
+            },
+          ],
+        },
+        {
+          path: paths.PRODUCTS,
+          children: [
+            {
+              index: true,
+              element: <ProductPage />,
+            },
+            {
+              path: `${ paths.PRODUCTS }/:productID`,
+              element: <h1>id</h1>,
+            },
+          ],
+        },
+        {
+          path: paths.SERVICE,
+          children: [
+            {
+              index: true,
+              element: <ServicePage />,
+            },
+            {
+              path: `${ paths.SERVICE }/:serviceID`,
+              element: <h1>id</h1>,
+            },
+          ],
+        },
+        {
+          path: paths.TEAMS,
+          children: [
+            {
+              index: true,
+              element: <TeamPage />,
+            },
+            {
+              path: `${ paths.TEAMS }/:teamID`,
+              element: <h1>id</h1>,
+            },
+          ],
+        },
+        {
+          path: paths.EMPLOYEES,
+          children: [
+            {
+              index: true,
+              element: <h1>EMPLOYEES</h1>,
+            },
+            {
+              path: `${ paths.EMPLOYEES }/:employeeID`,
+              element: <h1>id</h1>,
+            },
+          ],
+        },
+      ],
     },
     {
       path: '*',

@@ -1,22 +1,33 @@
-import { clsx } from 'clsx';
-import { ReactElement } from 'react';
-import { NavLink } from 'react-router-dom';
-import { Layout } from '../../entities/layout';
+import { ReactElement, useState } from 'react';
 import styles from '../../entities/layout/index.module.css';
-import { paths } from '../../shared/constants/paths.ts';
-import { ButtonElement } from '../../shared/ui/button';
+import { platformCards } from '../../shared/mock/platform-cards.ts';
+import { PlatformCard } from '../../shared/types/platform-card.ts';
+import { ImageCard } from '../../widgets/image-card';
+import { ContentHeader } from '../../widgets/content-header';
+
+const initialPlatformCards: PlatformCard[] = platformCards;
 
 export const PlatformPage = (): ReactElement => {
+  const [cards] = useState<PlatformCard[]>(initialPlatformCards);
   return (
-    <Layout>
-      <NavLink to={ paths.LOGIN }>
-        <ButtonElement
-          className={ clsx(styles.not_found_button) }
-          htmlType={ 'button' }
-        >
-          Войти
-        </ButtonElement>
-      </NavLink>
-    </Layout>
+    <>
+      <ContentHeader
+        title={ 'Платформы' }
+        quantity={ 150 }
+      />
+      <section className={ styles.content_grid }>
+        {
+          cards.map(card => (
+            <ImageCard
+              descriptionQuantity={ card.quantity }
+              descriptionTitle={ 'Продуктов' }
+              image={ card.image }
+              id={ card.id }
+              key={ card.id }
+            />
+          ))
+        }
+      </section>
+    </>
   );
 };
