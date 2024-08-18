@@ -1,0 +1,27 @@
+.page_wrapper {
+  --grid-header-layout: 1 / 1 / 2 / 3;
+  --grid-content-layout: 2 / 2 / 3 / 3;
+  --grid-aside-layout: 2 / 1 / 3 / 2;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: var(--grid-aside) 1fr;
+  grid-template-rows: var(--grid-header) 1fr;
+  margin: 0 auto;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.page_content {
+  grid-area: var(--grid-content-layout);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.page_header {
+  grid-area: var(--grid-header-layout);
+}
+
+.page_aside {
+  grid-area: var(--grid-aside-layout);
+}

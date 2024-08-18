@@ -10,7 +10,9 @@
   --color-border: #d9d9d9;
   --color-error: #ff4d4f;
 
-  /* --color-hover: #e6f7ff; */
+  /* layout */
+  --grid-header: 56px;
+  --grid-aside: 208px;
 
   /* fonts */
   --font-family-five: "SF Pro Display", sans-serif;

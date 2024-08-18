@@ -1,11 +1,9 @@
-import { clsx } from 'clsx';
-import { createBrowserRouter, NavLink } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
+import { PlatformPage } from '../pages/platform';
 import { LoginPage } from '../pages/login';
-import styles from '../pages/login/index.module.css';
 import { NotFoundPage } from '../pages/not-found';
 import { RegistrationPage } from '../pages/registration';
 import { paths } from '../shared/constants/paths.ts';
-import { ButtonElement } from '../shared/ui/button';
 
 export const router = createBrowserRouter(
   [
@@ -13,15 +11,7 @@ export const router = createBrowserRouter(
       index: true,
       path: paths.HOME,
       element: <>
-        <h1>Home page</h1>
-        <NavLink to={ paths.LOGIN }>
-          <ButtonElement
-            className={ clsx(styles.not_found_button) }
-            htmlType={ 'button' }
-          >
-            Войти
-          </ButtonElement>
-        </NavLink>
+        <PlatformPage />
       </>,
     },
     {
@@ -31,6 +21,30 @@ export const router = createBrowserRouter(
     {
       path: paths.REGISTER,
       element: <RegistrationPage />,
+    },
+    {
+      path: paths.STRUCTURE,
+      element: <h1>STRUCTURE</h1>,
+    },
+    {
+      path: paths.PLATFORM,
+      element: <PlatformPage />,
+    },
+    {
+      path: paths.PRODUCTS,
+      element: <h1>PRODUCTS</h1>,
+    },
+    {
+      path: paths.SERVICE,
+      element: <h1>SERVICE</h1>,
+    },
+    {
+      path: paths.TEAMS,
+      element: <h1>TEAMS</h1>,
+    },
+    {
+      path: paths.EMPLOYEES,
+      element: <h1>EMPLOYEES</h1>,
     },
     {
       path: '*',
