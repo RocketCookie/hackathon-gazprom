@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { createBrowserRouter, Navigate } from 'react-router-dom';
 import { Layout } from '../entities/layout';
 import { EmployeePage } from '../pages/employee';
 import { PlatformPage } from '../pages/platform';
@@ -17,7 +17,7 @@ export const router = createBrowserRouter(
       index: true,
       path: paths.HOME,
       element: <>
-        <PlatformPage />
+        <Navigate to={paths.PLATFORM} />
       </>,
     },
     {

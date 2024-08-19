@@ -3,9 +3,9 @@ enum PATH {
   LOGIN = '/login',
   REGISTER = '/register',
   STRUCTURE = '/structure',
-  PLATFORM = '/platform',
+  PLATFORM = '/platforms',
   PRODUCTS = '/products',
-  SERVICE = '/service',
+  SERVICE = '/services',
   TEAMS = '/teams',
   EMPLOYEES = '/employees',
 }
