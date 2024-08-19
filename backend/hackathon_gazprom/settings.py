@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     "djoser",
     "drf_yasg",
     "employees.apps.EmployeesConfig",
+    "platforms.apps.PlatformsConfig",
 ]
 
 MIDDLEWARE = [
