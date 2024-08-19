@@ -1,0 +1,60 @@
+.form {
+  color: var(--color-black);
+  display: flex;
+  flex-direction: column;
+  font: 500 16px / 1.5 var(--font-family-one);
+  max-width: 368px;
+  row-gap: 12px;
+  width: 100%;
+}
+
+.form_title {
+  font: 500 14px / 1.5 var(--font-family-one);
+  margin: 0;
+  text-align: center;
+}
+
+.form_fieldset, .form_fieldset_gap_xl {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.form_fieldset {
+  row-gap: 22px;
+}
+
+.form_fieldset_gap_xl {
+  row-gap: 32px;
+}
+
+.form_forgot_text, .form_register {
+  font: 400 14px / 1.57143 var(--font-family-one);
+  margin: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: opacity .5s ease, color .25s ease;
+}
+
+.form_forgot_text {
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.form_submit {
+  font-size: 16px;
+  min-height: 40px;
+}
+
+.form_register {
+  color: var(--color-hover);
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+}
+
+.form_forgot_text:hover, .form_register:hover {
+  color: var(--color-hover);
+  opacity: .45;
+}
