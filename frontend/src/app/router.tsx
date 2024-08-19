@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom';
 import { Layout } from '../entities/layout';
+import { EmployeePage } from '../pages/employee';
 import { PlatformPage } from '../pages/platform';
 import { LoginPage } from '../pages/login';
 import { NotFoundPage } from '../pages/not-found';
@@ -92,7 +93,7 @@ export const router = createBrowserRouter(
           children: [
             {
               index: true,
-              element: <h1>EMPLOYEES</h1>,
+              element: <EmployeePage />,
             },
             {
               path: `${ paths.EMPLOYEES }/:employeeID`,

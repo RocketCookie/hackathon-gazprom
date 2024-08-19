@@ -6,14 +6,15 @@ import { ProfileProps } from './types.ts';
 export const Profile = ({
   image,
   name,
+  isBlack = false
 }: ProfileProps): ReactElement => {
   return (
-    <section className={ clsx(styles.profile) }>
+    <span className={ clsx(styles.profile, {[styles.color_black]: isBlack}) }>
       <img src={ image }
            alt=""
            className={ clsx(styles.profile_image) }
       />
       <span>{ name }</span>
-    </section>
+    </span>
   );
 };

@@ -1,0 +1,25 @@
+.content {
+  background-color: var(--color-white);
+  box-sizing: border-box;
+  margin: 20px 24px 19px;
+  padding: 24px 24px;
+}
+
+.table_header {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 8px;
+}
+
+.table_title {
+  color: rgba(0, 0, 0, 0.85);
+  font: 500 16px / 1.5 var(--font-family-one);
+  margin: 0;
+}
+
+.table_buttons {
+  display: flex;
+  column-gap: 8px;
+}
