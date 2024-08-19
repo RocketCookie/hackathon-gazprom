@@ -8,34 +8,40 @@ import { TitleCardProps } from './types.ts';
 
 export const TitleCard = ({
   id,
+  link,
   title,
   descriptionQuantity,
   descriptionTitle,
   tags,
   isColored = false,
+  hasGridGap = false,
 }: TitleCardProps): ReactElement => {
   return (
     <NavLink
-      to={ `${ id }` }
+      to={ link }
       key={ id }
       className={ clsx(styles.card_link) }
     >
-      <article className={ clsx(styles.card) }>
+      <article className={ clsx(styles.card, {[styles.card_narrow]: !hasGridGap}) }>
         <header className={ clsx(styles.card_header) }>
           <h2 className={ clsx(styles.card_title) }>{ title }</h2>
-          <span className={ clsx(styles.card_tags) }>
-            {
-              tags.map(tag => (
-                <Tag
-                  key={ tag.id }
-                  color={ isColored ? tag.color : 'default' }
-                  className={ clsx(styles.card_tag) }
-                >
-                  { tag.title }
-                </Tag>
-              ))
-            }
-          </span>
+          {
+            (tags && tags.length > 0) && (
+              <span className={ clsx(styles.card_tags) }>
+                {
+                  tags?.map(tag => (
+                    <Tag
+                      key={ tag.id }
+                      color={ isColored ? tag.color : 'default' }
+                      className={ clsx(styles.card_tag) }
+                    >
+                      { tag.title }
+                    </Tag>
+                  ))
+                }
+              </span>
+            )
+          }
         </header>
         <CardBody
           quantity={ descriptionQuantity }

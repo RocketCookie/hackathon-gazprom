@@ -1,7 +1,6 @@
 .card {
   background: var(--color-white);
   border: 1px solid rgba(0, 0, 0, 0.06);
-  border-radius: 2px;
   box-sizing: border-box;
   color: rgba(0, 0, 0, 0.85);
   display: flex;
@@ -9,11 +8,17 @@
   max-width: 284px;
   min-height: 134px;
   width: 100%;
+  cursor: pointer;
 }
 
-.card:hover {
+.card:hover:not(.card_narrow) {
   box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
-  cursor: pointer;
+  border-radius: 2px;
+}
+
+.card_narrow:hover {
+  transition: background-color .5s ease;
+  background-color: rgba(0, 0, 0, 0.06);
 }
 
 .card_header {

@@ -1,4 +1,5 @@
 import { ReactElement, useState } from 'react';
+import { paths } from '../../shared/constants/paths.ts';
 import styles from './index.module.css';
 import { teamCards } from '../../shared/mock/team-cards.ts';
 import { TeamCard } from '../../shared/types/team-card.ts';
@@ -20,11 +21,13 @@ export const TeamPage = (): ReactElement => {
           cards.map(card => (
             <TitleCard
               id={ card.id }
+              link={ `${ paths.TEAMS }/${ card.id }` }
               title={ card.title }
               descriptionQuantity={ card.quantity }
               descriptionTitle={ 'Сотрудников' }
               isColored={ card.isColored }
               tags={ card.tags }
+              hasGridGap={ true }
             />
           ))
         }

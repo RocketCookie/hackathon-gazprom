@@ -25,6 +25,7 @@ export const Aside = ({
                   ) }
                 to={ item.link }
               >
+                { item.icon }
                 { item.title }
               </NavLink>
             </li>

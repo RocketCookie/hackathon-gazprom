@@ -28,6 +28,9 @@
   padding: 9px 16px;
   text-decoration: none;
   width: 100%;
+  color: var(--color-black);
+  display: flex;
+  gap: 10px;
 }
 
 .menu_link_active {
