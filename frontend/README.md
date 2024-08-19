@@ -64,10 +64,10 @@
 
 ## Стек
 
-- [HTML5][tech-html]
-- [CSS3][tech-css]
-- [JavaScript][tech-js]
-- [TypeScript][tech-ts]
+- [HTML5][tech-html] 
+- [CSS3][tech-css] 
+- [JavaScript][tech-js] 
+- [TypeScript][tech-ts] 
 - [React][tech-react]
 - [React router][tech-react-router]
 - [Библиотека компонентов Ant design][tech-antd]

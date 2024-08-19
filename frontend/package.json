@@ -17,6 +17,13 @@
     "email": "julfy.web@gmail.com",
     "name": "Bogdan Sutuzhko"
   },
+  "repository": {
+    "url": "https://github.com/RocketCookie/hackathon-gazprom"
+  },
+  "author": {
+    "email": "julfy.web@gmail.com",
+    "name": "Bogdan Sutuzhko"
+  },
   "dependencies": {
     "@ant-design/icons": "^5.4.0",
     "antd": "^5.20.1",
