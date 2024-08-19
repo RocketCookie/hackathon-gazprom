@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     "drf_yasg",
     "employees.apps.EmployeesConfig",
     "platforms.apps.PlatformsConfig",
+    "teams.apps.TeamsConfig",
 ]
 
 MIDDLEWARE = [
