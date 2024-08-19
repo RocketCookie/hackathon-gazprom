@@ -53,14 +53,14 @@
 
 ## Роуты готовых экранов
 
-- [Страница логина](http://localhost:5173/login)
-- [Страница регистрации](http://localhost:5173/register)
-- [Страница платформ](http://localhost:5173/platforms)
-- [Страница детального просмотра платформы](http://localhost:5173/register/1)
-- [Страница продуктов](http://localhost:5173/products)
-- [Страница сервисов](http://localhost:5173/services)
-- [Страница команд](http://localhost:5173/teams)
-- [Страница сотрудников](http://localhost:5173/employees)
+- [Страница логина](https://rocketcookie.github.io/hackathon-gazprom/login)
+- [Страница регистрации](https://rocketcookie.github.io/hackathon-gazprom/register)
+- [Страница платформ](https://rocketcookie.github.io/hackathon-gazprom/platforms)
+- [Страница детального просмотра платформы](https://rocketcookie.github.io/hackathon-gazprom/platforms/1)
+- [Страница продуктов](https://rocketcookie.github.io/hackathon-gazprom/products)
+- [Страница сервисов](https://rocketcookie.github.io/hackathon-gazprom/services)
+- [Страница команд](https://rocketcookie.github.io/hackathon-gazprom/teams)
+- [Страница сотрудников](https://rocketcookie.github.io/hackathon-gazprom/employees)
 
 ## Стек
 
