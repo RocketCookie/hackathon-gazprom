@@ -1,0 +1,8 @@
+.content_grid {
+  box-sizing: border-box;
+  padding: 20px 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  gap: 16px;
+}

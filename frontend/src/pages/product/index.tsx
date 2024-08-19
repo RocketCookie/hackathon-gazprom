@@ -1,5 +1,5 @@
 import { ReactElement, useState } from 'react';
-import styles from '../../entities/layout/index.module.css';
+import styles from './index.module.css';
 import { productCards } from '../../shared/mock/product-cards.ts';
 import { ProductCard } from '../../shared/types/product-card.ts';
 import { ContentHeader } from '../../widgets/content-header';

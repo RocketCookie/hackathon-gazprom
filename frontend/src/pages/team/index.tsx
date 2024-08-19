@@ -1,5 +1,5 @@
 import { ReactElement, useState } from 'react';
-import styles from '../../entities/layout/index.module.css';
+import styles from './index.module.css';
 import { teamCards } from '../../shared/mock/team-cards.ts';
 import { TeamCard } from '../../shared/types/team-card.ts';
 import { ContentHeader } from '../../widgets/content-header';
