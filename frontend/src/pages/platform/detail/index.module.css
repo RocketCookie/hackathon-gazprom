@@ -1,0 +1,9 @@
+.page_content {
+  display: grid;
+  gap: 24px;
+  grid-template-areas:
+    "head head side"
+    "foot foot side";
+  grid-template-columns: repeat(3, 1fr);
+  margin: 24px 24px 8px;
+}

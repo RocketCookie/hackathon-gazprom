@@ -4,6 +4,6 @@ export type ProductCard = {
   id: string;
   title: string;
   quantity: number;
-  isColored: boolean;
-  tags: Tag[];
+  isColored?: boolean;
+  tags?: Tag[];
 }

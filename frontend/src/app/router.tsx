@@ -4,6 +4,7 @@ import { EmployeePage } from '../pages/employee';
 import { PlatformPage } from '../pages/platform';
 import { LoginPage } from '../pages/login';
 import { NotFoundPage } from '../pages/not-found';
+import { PlatformDetailPage } from '../pages/platform/detail';
 import { ProductPage } from '../pages/product';
 import { RegistrationPage } from '../pages/registration';
 import { ServicePage } from '../pages/service';
@@ -45,7 +46,7 @@ export const router = createBrowserRouter(
             },
             {
               path: `${ paths.PLATFORM }/:platformID`,
-              element: <h1>id</h1>,
+              element: <PlatformDetailPage />,
             },
           ],
         },

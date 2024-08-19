@@ -1,0 +1,66 @@
+.history {
+  background-color: var(--color-white);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 2px;
+  grid-area: foot;
+}
+
+.history_header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  display: flex;
+  padding: 16px 24px;
+}
+
+.history_title {
+  color: rgba(0, 0, 0, 0.85);
+  font: 500 16px / 1.5 var(--font-family-one);
+  margin: 0;
+}
+
+.history_list {
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 24px;
+}
+
+.history_item {
+  color: rgba(0, 0, 0, 0.85);
+  display: grid;
+  font: 400 14px / 1.57143 var(--font-family-one);
+  gap: 4px 16px;
+  padding: 12px 0;
+  grid-template-columns: 32px 1fr;
+  grid-template-rows: repeat(2, 16px);
+}
+
+.history_item:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.user_image {
+  border-radius: 50%;
+  grid-area: 1 / 1 / 3 / 2;
+  height: 100%;
+  max-height: 32px;
+  max-width: 32px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.user_name {
+  color: #1890ff;
+  padding-right: 4px;
+}
+
+.history_activity {
+  grid-area: 1 / 2 / 2 / 3;
+  margin: 0;
+}
+
+.history_timestamp {
+  color: rgba(0, 0, 0, 0.45);
+  grid-area: 2 / 2 / 3 / 3;
+  margin: 0;
+}

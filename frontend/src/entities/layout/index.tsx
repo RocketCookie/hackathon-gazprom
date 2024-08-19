@@ -1,7 +1,7 @@
 import { clsx } from 'clsx';
 import { ReactElement } from 'react';
 import { Outlet } from 'react-router-dom';
-import { menuOptions } from '../../shared/mock/menu.ts';
+import { menuOptions } from '../../shared/mock/menu.tsx';
 import { Aside } from '../../widgets/aside';
 import { Header } from '../../widgets/header';
 import styles from './index.module.css';
