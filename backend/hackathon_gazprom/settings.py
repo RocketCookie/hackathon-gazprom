@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     "employees.apps.EmployeesConfig",
     "platforms.apps.PlatformsConfig",
     "teams.apps.TeamsConfig",
+    "leadership.apps.LeadershipConfig",
 ]
 
 MIDDLEWARE = [

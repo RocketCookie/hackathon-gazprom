@@ -15,42 +15,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name="Team",
-            fields=[
-                (
-                    "id",
-                    models.BigAutoField(
-                        auto_created=True,
-                        primary_key=True,
-                        serialize=False,
-                        verbose_name="ID",
-                    ),
-                ),
-                ("name_team", models.CharField(max_length=100)),
-                ("description_team", models.TextField(blank=True, null=True)),
-                ("challenge_team", models.TextField(blank=True, null=True)),
-                ("creation_date_team", models.DateField()),
-            ],
-        ),
-        migrations.CreateModel(
-            name="RoleInTeam",
-            fields=[
-                (
-                    "role",
-                    models.CharField(
-                        max_length=8, primary_key=True, serialize=False, unique=True
-                    ),
-                ),
-                (
-                    "team",
-                    models.ForeignKey(
-                        on_delete=django.db.models.deletion.CASCADE, to="teams.team"
-                    ),
-                ),
-            ],
-        ),
-        migrations.CreateModel(
-            name="EmployeeInTeam",
+            name="LeaderPlatform",
             fields=[
                 (
                     "id",
@@ -69,22 +34,16 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 (
-                    "role",
+                    "platform",
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.CASCADE,
-                        to="teams.roleinteam",
-                    ),
-                ),
-                (
-                    "team",
-                    models.ForeignKey(
-                        on_delete=django.db.models.deletion.CASCADE, to="teams.team"
+                        to="platforms.platform",
                     ),
                 ),
             ],
         ),
         migrations.CreateModel(
-            name="TeamInService",
+            name="LeaderProduct",
             fields=[
                 (
                     "id",
@@ -96,24 +55,47 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 (
-                    "service",
+                    "employee",
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.CASCADE,
-                        related_name="teams_in_service",
-                        to="platforms.service",
+                        to=settings.AUTH_USER_MODEL,
                     ),
                 ),
                 (
-                    "team",
+                    "product",
                     models.ForeignKey(
                         on_delete=django.db.models.deletion.CASCADE,
-                        related_name="services_in_team",
-                        to="teams.team",
+                        to="platforms.product",
                     ),
                 ),
             ],
-            options={
-                "unique_together": {("service", "team")},
-            },
+        ),
+        migrations.CreateModel(
+            name="LeaderService",
+            fields=[
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                (
+                    "employee",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to=settings.AUTH_USER_MODEL,
+                    ),
+                ),
+                (
+                    "service",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="platforms.service",
+                    ),
+                ),
+            ],
         ),
     ]
