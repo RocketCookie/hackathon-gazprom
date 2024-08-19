@@ -15,6 +15,14 @@
   width: 100%;
 }
 
+.logo_link {
+  text-decoration: none;
+}
+
+.logo_link:visited {
+  color: inherit;
+}
+
 .logo {
   color: white;
 }
